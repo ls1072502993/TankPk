@@ -1,0 +1,15 @@
+{
+  "name": "tankpk",
+  "version": "1.0.0",
+  "description": "Native JS tank battle remake",
+  "scripts": {
+    "start": "serve .",
+    "dev": "serve ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.6"
+  }
+}

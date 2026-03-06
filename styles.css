@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: dark;
+  --bg: #060606;
+  --panel: #151515;
+  --panel-2: #242424;
+  --text: #d4d4d4;
+  --muted: #8d8d8d;
+  --accent: #e89a35;
+  --danger: #d15a42;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    linear-gradient(180deg, #111 0%, #040404 42%, #000 100%);
+  color: var(--text);
+  font-family: "Cascadia Mono", "Consolas", monospace;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.app-shell {
+  width: min(100%, 960px);
+}
+
+.frame {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+
+.marquee,
+.footer-note {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 14px;
+  border: 2px solid #4c4c4c;
+  background: linear-gradient(180deg, #222, #111);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+}
+
+.marquee__title {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.marquee__hint,
+.footer-note {
+  color: var(--muted);
+}
+
+.viewport {
+  position: relative;
+  display: inline-flex;
+  padding: 12px;
+  border: 4px solid #808080;
+  background:
+    linear-gradient(180deg, #2a2a2a 0%, #181818 45%, #101010 100%);
+  box-shadow:
+    0 0 0 4px #242424 inset,
+    0 16px 42px rgba(0, 0, 0, 0.45);
+}
+
+canvas {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  width: min(100vw - 80px, 912px);
+  max-width: 100%;
+  height: auto;
+  background: #000;
+}
+
+.overlay {
+  position: absolute;
+  inset: 12px;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.68);
+  color: var(--text);
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.overlay--hidden {
+  opacity: 0;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding: 10px;
+  }
+
+  .marquee,
+  .footer-note {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  canvas {
+    width: calc(100vw - 40px);
+  }
+}

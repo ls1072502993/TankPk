@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tank PK 50</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="frame">
+      <header class="marquee" id="marquee">
+        <span class="marquee__title">BATTLE CITY 50</span>
+        <span class="marquee__hint">WASD / Arrow  Move, J / Space  Fire, Enter  Start, P  Pause</span>
+      </header>
+      <div class="viewport">
+        <canvas id="game" width="608" height="448" aria-label="Tank PK battlefield"></canvas>
+        <div class="overlay overlay--hidden" id="overlay"></div>
+      </div>
+      <footer class="footer-note">
+        <span>Original-inspired pixel remake</span>
+        <span>Stage 1-50</span>
+      </footer>
+    </section>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
